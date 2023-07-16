@@ -14,6 +14,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
+    console.log(e);
     const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
@@ -78,7 +79,7 @@ const Register = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>
-          You do have an account? <Link to="/register">Login</Link>
+          You do have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
